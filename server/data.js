@@ -1,0 +1,68 @@
+export const roles = [
+  {id:'student',name:'Ученик',description:'Личный прогресс, занятия и достижения'},
+  {id:'teacher',name:'Учитель',description:'Ученики и журнал своего класса'},
+  {id:'deputy',name:'Завуч',description:'Учебный процесс всей школы'},
+  {id:'director',name:'Директор',description:'Школа, сотрудники и учебные настройки'},
+  {id:'developer',name:'Разработчик',description:'Настройки платформы и управление доступом'},
+];
+export const quizzes = [
+  {id:'python',title:'Циклы и условия',subject:'Python',minutes:8,description:'Разберись с range(), циклами и условиями.',questions:[
+    {prompt:'Что вернёт list(range(2, 8, 2))?',options:['[2, 4, 6]','[2, 4, 6, 8]','[0, 2, 4, 6]','[2, 3, 4, 5, 6, 7]'],correct:0,explanation:'range(start, stop, step) не включает правую границу: числа 2, 4 и 6.'},
+    {prompt:'Чему равно sum([1, 2, 3, 4])?',options:['4','6','10','1234'],correct:2,explanation:'sum() складывает элементы: 1 + 2 + 3 + 4 = 10.'},
+    {prompt:'Какой цикл удобен, если число повторений заранее известно?',options:['while True','for','if','try'],correct:1,explanation:'for перебирает готовую последовательность, например range(5).'},
+    {prompt:'Сколько раз выполнится тело for i in range(3)?',options:['2','3','4','Бесконечно'],correct:1,explanation:'range(3) содержит три значения: 0, 1, 2.'},
+    {prompt:'Что означает оператор % в Python?',options:['Деление','Процент от числа','Остаток от деления','Степень'],correct:2,explanation:'Оператор % возвращает остаток. Например, 7 % 3 равно 1.'},
+  ]},
+  {id:'algebra',title:'Квадратные уравнения',subject:'Алгебра',minutes:10,description:'Дискриминант, корни и немного практики.',questions:[
+    {prompt:'Найди корни уравнения x² − 5x + 6 = 0.',options:['1 и 6','−2 и −3','2 и 3','0 и 5'],correct:2,explanation:'x² − 5x + 6 = (x − 2)(x − 3), поэтому x = 2 или x = 3.'},
+    {prompt:'Чему равен дискриминант x² + 4x + 4 = 0?',options:['16','0','8','−4'],correct:1,explanation:'D = b² − 4ac = 4² − 4·1·4 = 0. Есть один корень: −2.'},
+    {prompt:'Сколько действительных корней у x² + 1 = 0?',options:['Два','Один','Ни одного','Бесконечно много'],correct:2,explanation:'Квадрат действительного числа не бывает отрицательным, а здесь x² = −1.'},
+    {prompt:'Если D > 0, сколько различных корней имеет квадратное уравнение?',options:['Ни одного','Один','Два','Три'],correct:2,explanation:'При положительном дискриминанте формула даёт два разных значения.'},
+    {prompt:'Чему равна сумма корней x² − 7x + 10 = 0?',options:['10','−7','7','5'],correct:2,explanation:'По теореме Виета сумма корней равна −b/a = 7.'},
+  ]},
+  {id:'english',title:'Условные предложения',subject:'Английский',minutes:7,description:'Second conditional на понятных примерах.',questions:[
+    {prompt:'If I ___ more time, I would learn French.',options:['have','had','will have','having'],correct:1,explanation:'В Second conditional используем If + Past Simple, would + глагол.'},
+    {prompt:'If she studied harder, she ___ the exam.',options:['will pass','passes','would pass','passed'],correct:2,explanation:'Гипотетический результат выражается через would + начальную форму глагола.'},
+    {prompt:'Выбери правильный перевод: «На твоём месте я бы попросил помощи».',options:['If I were you, I would ask for help.','If I am you, I ask help.','If I was you, I will ask.','I were ask help.'],correct:0,explanation:'If I were you — устойчивый способ дать совет.'},
+    {prompt:'Second conditional описывает…',options:['Прошлое событие','Общее правило природы','Гипотетическую ситуацию сейчас или в будущем','Приказ'],correct:2,explanation:'Second conditional нужен для маловероятных или воображаемых ситуаций.'},
+  ]},
+];
+export const materials = [
+  {id:'python-loops',title:'Циклы Python: от for до while',subject:'Python',minutes:6,body:'Цикл помогает повторять действия.\n\nfor перебирает элементы последовательности:\nfor number in range(1, 4):\n    print(number)\n\nРезультат: 1, 2, 3. Правая граница range не включается.\n\nwhile выполняет тело, пока условие истинно:\ncount = 0\nwhile count < 3:\n    count += 1\n\nВыбирай for для известной последовательности, while — для повторений до выполнения условия. Не забудь менять переменную в while, чтобы не получить бесконечный цикл.\n\nПопробуй: выпиши числа, которые даст range(2, 10, 3). Ответ: 2, 5, 8.'},
+  {id:'algebra-roots',title:'Квадратные уравнения без спешки',subject:'Алгебра',minutes:8,body:'Квадратное уравнение имеет вид ax² + bx + c = 0, где a ≠ 0.\n\n1. Найди дискриминант: D = b² − 4ac.\n2. Если D > 0, корней два: x = (−b ± √D) / 2a.\n3. Если D = 0, корень один: x = −b / 2a.\n4. Если D < 0, действительных корней нет.\n\nПример: x² − 5x + 6 = 0.\nD = 25 − 24 = 1.\nx₁ = (5 − 1) / 2 = 2; x₂ = (5 + 1) / 2 = 3.\n\nПроверка: 2² − 5·2 + 6 = 0. Всё верно!\n\nПопробуй решить x² − 7x + 10 = 0. Ответ: 2 и 5.'},
+  {id:'english-conditional',title:'Что, если? Second conditional',subject:'Английский',minutes:5,body:'Second conditional помогает говорить о воображаемых ситуациях.\n\nФормула: If + Past Simple, would + глагол.\n\nIf I had more time, I would read more books.\nЕсли бы у меня было больше времени, я бы читал больше книг.\n\nIf she lived closer, we would meet every week.\nЕсли бы она жила ближе, мы бы встречались каждую неделю.\n\nДля совета: If I were you, I would ask the teacher.\nНа твоём месте я бы спросил учителя.\n\nПосле would не ставь to. В части с if не нужен would.\n\nПопробуй закончить: If I could travel anywhere, I would…'},
+  {id:'physics-motion',title:'Скорость, время и расстояние',subject:'Физика',minutes:5,body:'Равномерное движение описывается формулой s = v × t.\n\ns — путь, v — скорость, t — время.\n\nЕсли велосипедист движется со скоростью 6 м/с в течение 8 с, путь равен 6 × 8 = 48 м.\n\nЧтобы найти скорость, раздели путь на время: v = s / t. Чтобы найти время: t = s / v.\n\nСледи за единицами измерения. 1 км = 1000 м, 1 час = 3600 с.\n\nПопробуй: поезд проходит 180 км за 3 часа. Его скорость: 60 км/ч.'},
+];
+export const lessons = [
+  {id:'l1',subject:'Алгебра',title:'Квадратные уравнения',time:'09:00',endTime:'09:45',day:3,room:'Кабинет 204',teacher:'Айгуль Нурлановна'},
+  {id:'l2',subject:'Python',title:'Практикум: циклы',time:'10:00',endTime:'10:45',day:3,room:'Кабинет 301',teacher:'Ерлан Серикович'},
+  {id:'l3',subject:'Английский',title:'If I were you…',time:'11:00',endTime:'11:45',day:3,room:'Кабинет 108',teacher:'Динара Асхатовна'},
+  {id:'l4',subject:'Физика',title:'Движение и скорость',time:'12:00',endTime:'12:45',day:3,room:'Лаборатория 2',teacher:'Марат Бекович'},
+  {id:'l5',subject:'Алгебра',title:'Теорема Виета',time:'09:00',endTime:'09:45',day:4,room:'Кабинет 204',teacher:'Айгуль Нурлановна'},
+  {id:'l6',subject:'Python',title:'Квиз: циклы и условия',time:'10:00',endTime:'10:45',day:4,room:'Кабинет 301',teacher:'Ерлан Серикович'},
+  {id:'l7',subject:'Английский',title:'Разговорный клуб',time:'11:00',endTime:'11:45',day:5,room:'Кабинет 108',teacher:'Динара Асхатовна'},
+  {id:'l8',subject:'Алгебра',title:'Практикум по задачам',time:'09:00',endTime:'09:45',day:1,room:'Кабинет 204',teacher:'Айгуль Нурлановна'},
+  {id:'l9',subject:'Физика',title:'Решение задач',time:'10:00',endTime:'10:45',day:2,room:'Лаборатория 2',teacher:'Марат Бекович'},
+];
+export const courses = [
+  {id:'python-start',title:'Python с нуля',subject:'Программирование',price:500,live:false,description:'Первые программы, понятные примеры и практика. Курс готовится.'},
+  {id:'olympiad-math',title:'Олимпиадная математика',subject:'Математика',price:750,live:false,description:'Нестандартные задачи и новые способы мыслить. Курс готовится.'},
+  {id:'english-speaking',title:'Английский для общения',subject:'Языки',price:600,live:false,description:'Больше уверенности в каждом разговоре. Курс готовится.'},
+];
+export const demoUser = {id:'demo',name:'Аружан Садыкова',email:'aruzhan@example.test',role:'student',classId:'11A',schoolId:'better-education',coins:1240,streak:12,stars:38,lastActivity:'2026-11-11'};
+export const demoStudents = [
+  {id:'s1',name:'Алихан Нурлан',classId:'11A',role:'student',coins:1820,streak:28,stars:52},
+  {id:'s2',name:'Айша Ермек',classId:'11B',role:'student',coins:1650,streak:21,stars:47},
+  {id:'s3',name:'Данияр Асан',classId:'11A',role:'student',coins:1490,streak:17,stars:43},
+  demoUser,
+  {id:'s5',name:'София Ким',classId:'11B',role:'student',coins:1160,streak:9,stars:35},
+  {id:'s6',name:'Тимур Омар',classId:'11A',role:'student',coins:1080,streak:14,stars:32},
+];
+export function demoState(){return structuredClone({
+  demo:true,user:{...demoUser},roles,courses,settings:{mascotUrl:''},admin:false,aiEnabled:false,
+  grades:[{id:'g1',studentId:'demo',subject:'Алгебра',score:5,date:'2026-11-10'},{id:'g2',studentId:'demo',subject:'Python',score:5,date:'2026-11-09'},{id:'g3',studentId:'demo',subject:'Английский',score:4,date:'2026-11-09'},{id:'g4',studentId:'demo',subject:'Физика',score:4,date:'2026-11-08'}],
+  transactions:[{id:'t1',amount:50,label:'Серия: 10 дней',date:'2026-11-09'},{id:'t2',amount:30,label:'Отличная оценка по алгебре',date:'2026-11-10'},{id:'t3',amount:20,label:'Квиз: Python',date:'2026-11-09'}],
+  attempts:[{quizId:'english',score:75,total:4,correct:3,date:'2026-11-08'}],
+  achievements:[{id:'a1',studentId:'demo',title:'Республиканская олимпиада по математике',subject:'Математика',level:'Республиканская',result:'II место',date:'2026-10-24',status:'verified'},{id:'a2',studentId:'demo',title:'Школьная олимпиада по информатике',subject:'Информатика',level:'Школьная',result:'I место',date:'2026-10-10',status:'verified'}],
+  materials,lessons,students:demoStudents,quizzes:quizzes.map(({questions,...q})=>({...q,questionCount:questions.length})),
+});}
